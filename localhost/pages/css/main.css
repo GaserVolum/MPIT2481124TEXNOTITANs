@@ -99,6 +99,19 @@ justify-content: flex-end;
 gap: 10px;
 }
 
+.filterccc {
+    
+text-decoration: none;
+color: #31B0F4;
+}
+
+
+.filterccc:hover {
+    
+    text-decoration: underline;
+    color: #25abf3;
+    }
+
 .pageContentDiv .rightContentSection .selectionConfCtg{
         padding: 30px;
     border-radius: 20px;
@@ -137,19 +150,40 @@ background: rgba(255, 255, 255, 0.01);
     text-decoration: underline;
 }
 
-.selectionConfCtg {
-    padding: 30px;
-}
-
 .ConfList {
+    gap: 10px;
     display: grid;
-    align-items: flex-start;
+    align-items: center;
     width: auto;
 }
 
-.ConfReady {
+.ConfList div {
     background-color: white;
-    border-radius: 30px;
+    border-radius: 20px;
+    width: auto;
+    /* min-height: 30vh; */
+    height: auto;
+}
+
+.confReady div {
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    margin: 10px 15px;
+}
+
+.confReadyArea {
+    display: flex;
+    align-items: center;
+}
+
+.confReadyArea img {
+    display: flex;
+    justify-content: flex-start;
+    margin-right: auto;
+    width: 100px;
+    height: 100px;
 }
 
 .pageContentDiv .leftContentSection .selectionMenu .picProfile img {
