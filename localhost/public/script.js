@@ -19,10 +19,10 @@ showChat.addEventListener("click", () => {
   document.querySelector(".header__back").style.display = "block";
 });
 
-const user = prompt("Enter your name");
+const user = prompt("Введите ваше имя по форме ИМЯ(РОЛЬ)");
 
 var peer = new Peer({
-  host: '192.168.146.106',//сюда вводить локальный ip  
+  host: '192.168.139.107',//сюда вводить локальный ip  
   port: 3031,
   path: '/peerjs',
   secure: true,
@@ -153,7 +153,7 @@ stopVideo.addEventListener("click", () => {
 
 inviteButton.addEventListener("click", (e) => {
   prompt(
-    "Copy this link and send it to people you want to meet with",
+    "Ссылка на текущую конференцию",
     window.location.href
   );
 });
@@ -162,7 +162,7 @@ socket.on("createMessage", (message, userName) => {
   messages.innerHTML =
     messages.innerHTML +
     `<div class="message">
-        <b><i class="far fa-user-circle"></i> <span> ${userName === user ? "me" : userName
+        <b><i class="far fa-user-circle"></i> <span> ${userName === user ? "Вы" : userName
     }</span> </b>
         <span>${message}</span>
     </div>`;
