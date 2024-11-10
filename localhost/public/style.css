@@ -19,16 +19,15 @@
 }
 
 .header {
+  position: relative;
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
   align-items: center;
   height: 8vh;
-  position: relative;
   width: 100%;
   margin: 10;
   background-color: var(--main-darklg);
 }
-
 .logo {
   margin: 0 10px;
   display: flex;
@@ -38,10 +37,16 @@
 }
 
 .logo nav {
-	display: flex;
-	justify-content: flex-end;
-	margin-left: auto;
+  position: absolute;
+  right: 20px;
+  display: flex;
+  align-items: center;
 	gap: 10px;
+}
+
+
+.rightButtons a {
+  margin-left: 20px;  /* Отступ между кнопками */
 }
 
 .logo > h3 {
