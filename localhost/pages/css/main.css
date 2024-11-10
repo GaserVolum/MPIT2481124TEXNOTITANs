@@ -65,11 +65,45 @@ body {
     width: 70vw;
     height: 1000px;
     margin: 0 auto;
+    display: flex;
+    gap: 10px;
+
 }
 
 .leftContentSection {
     width: 20vw;
     height: 100%;
+}
+
+.pageContentDiv .rightContentSection {
+    width: 80vw;
+    height: 100%;
+    color: white;
+}
+
+.pageContentDiv .rightContentSection .textSelectedCtg {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.pageContentDiv .rightContentSection .textSelectedCtg .filterConfCtg {
+/* height: 450px; */
+display: flex;
+align-items: center;
+margin-left: auto;
+justify-content: flex-end;
+gap: 10px;
+}
+
+.pageContentDiv .rightContentSection .selectionConfCtg{
+        padding: 30px;
+    border-radius: 20px;
+backdrop-filter: blur(161.3px);
+background: rgba(255, 255, 255, 0.01);
 }
 
 .selectionMenu {
@@ -103,19 +137,45 @@ background: rgba(255, 255, 255, 0.01);
     text-decoration: underline;
 }
 
-.picProfile {
-    position: fixed;
-    top: 0;
-    left: 0;
-    border-radius: 50%;
-    background-color: antiquewhite;
-    width: 150 px;
-    height: 150 px;
+.selectionConfCtg {
+    padding: 30px;
+}
+
+.ConfList {
+    display: grid;
+    align-items: flex-start;
+    width: auto;
+}
+
+.ConfReady {
+    background-color: white;
+    border-radius: 30px;
+}
+
+.pageContentDiv .leftContentSection .selectionMenu .picProfile img {
+    width: 100 px;
+    height: 100 px;
 }
 
 .profileContent {
+    display: inline-flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
     padding: 10px;
     color: white;
+}
+
+.pageContentDiv .leftContentSection .selectionMenu .emptySpace {
+    height: 12vh;
+}
+
+.pageContentDiv .leftContentSection .selectionMenu .settCab {
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    gap: 5px; 
+    font-size: medium;
 }
 
 .line {

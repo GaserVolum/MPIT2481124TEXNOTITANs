@@ -6,8 +6,12 @@
         <link href="css/main.css" rel="stylesheet" type="text/css">
     </head>
     <body class="bodyPage"> 
+
+      
       <div class="circle1"></div>
       <div class="circle2"></div>
+      
+      
       <section class="headerDiv" id="headerDiv">
         <header class="UpPanel">
             <a href="index.html">
@@ -33,11 +37,17 @@
         <div class="pageContentDiv">
           <section class="leftContentSection">
             <div class="profileContent">
-              <div id="picProfile"></div>
+              <img class="picProfile" src="pic\аватарка.svg" width="100px" height="100px">
+
               <nav>
                 <h3 style="height: 5px;">Даниил</h3>
                 <p>уровень 2</p>
               </nav>
+
+              <a href="#">
+                <img src="pic/ic_baseline.svg">
+              </a>
+
             </div>
 
             <div class="selectionMenu">
@@ -49,12 +59,28 @@
                 <a href="#">Курсы</a>
                 <div class="line"></div>
                 <a href="#">Сообщения</a>
+                <div class="emptySpace"></div>
+                <a href="#" class="settCab">
+                  <img src="pic/ic_round-settings.svg">
+                  Настройки профиля
+                </a>
               </nav>
             </div>
           </section>
           <section class="rightContentSection">
-            <div id="textSelectedCtg">
-
+            <header class="textSelectedCtg">
+                <h2>Конференции</h2>
+                <nav class="filterConfCtg">
+                  <p>по дате:</p>
+                  <a href="#">ближайшие</a>
+                </nav>
+            </header>
+            
+            <div class="selectionConfCtg">
+              <nav class="ConfList">
+                <div class="ConfReady"></div>
+                <div class="ConfNotReady"></div>
+              </nav>
             </div>
           </section>
         </div>
@@ -64,6 +90,7 @@
 
         </footer>
       </section>
+
     </body>
 </html>
 
