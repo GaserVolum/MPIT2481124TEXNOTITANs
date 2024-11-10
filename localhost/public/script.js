@@ -22,11 +22,13 @@ showChat.addEventListener("click", () => {
 const user = prompt("Enter your name");
 
 var peer = new Peer({
-  host: '127.0.0.1',
-  port: 3030,
+  host: '192.168.146.106',//сюда вводить локальный ip  
+  port: 3031,
   path: '/peerjs',
+  secure: true,
   config: {
     'iceServers': [
+	{ url: 'stun:stun.l.google.com:19302' },
       { url: 'stun:stun01.sipphone.com' },
       { url: 'stun:stun.ekiga.net' },
       { url: 'stun:stunserver.org' },

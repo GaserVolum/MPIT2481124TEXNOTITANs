@@ -1,12 +1,19 @@
 const express = require("express");
 const app = express();
-const server = require("http").Server(app);
+const https = require("https");
+const fs = require("fs");
+const sslOptions = {
+  key: fs.readFileSync("./privateKey.key"),  // путь к приватному ключу
+  cert: fs.readFileSync("./certificate.crt"),  // путь к сертификату
+ 
+};
+const server = https.createServer(sslOptions, app);
 const { v4: uuidv4 } = require("uuid");
 app.set("view engine", "ejs");
 const io = require("socket.io")(server, {
-  cors: {
-    origin: '*'
-  }
+ cors: {
+   origin: '*'
+ }
 });
 const { ExpressPeerServer } = require("peer");
 const opinions = {
@@ -36,4 +43,4 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(process.env.PORT || 3030);
+server.listen(process.env.PORT || 3031,"0.0.0.0");
