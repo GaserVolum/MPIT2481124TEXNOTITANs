@@ -1,0 +1,203 @@
+@font-face {
+    font-family: "Manrope";
+    src: url("../fonts/Manrope.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: linear-gradient(301deg, #222222 0%, #2D2D2D 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+}
+
+
+.circle1, .circle2 {
+    position: absolute;
+    border-radius: 50%; /* Делаем элементы круглыми */
+    background-color: #121949;
+    filter: blur(150px); /* Размытие */
+    pointer-events: none; /* Чтобы элементы не перекрывали другие элементы */
+}
+
+.circle1 {
+    width: 500px;
+    height: 500px;
+    background-color: #5E1C1D;
+    top: -20%; /* Позиция по вертикали */
+    left: -10%; /* Позиция по горизонтали */
+}
+
+.circle2 {
+    width: 600px;
+    height: 600px;
+    background-color: #121949;
+    top: -40%; /* Позиция по вертикали */
+    left: 70%; /* Позиция по горизонтали */
+}
+
+.UpPanel {
+    position: relative; /* Убираем лишние свойства */
+    width: 70vw; /* Центрируем панель с отступами */
+    margin: 0 auto; /* Центрирование по горизонтали */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    padding: 10px 30px;
+}
+
+.headerButtons {
+    width: 55px;
+    height: 55px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    order: 2;
+    flex-grow: 0;
+}
+
+.pageContentDiv {
+    font-family: 'Manrope';
+    width: 70vw;
+    height: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+
+}
+
+.leftContentSection {
+    width: 20vw;
+    height: 100%;
+}
+
+.pageContentDiv .rightContentSection {
+    width: 80vw;
+    height: 100%;
+    color: white;
+}
+
+.pageContentDiv .rightContentSection .textSelectedCtg {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.pageContentDiv .rightContentSection .textSelectedCtg .filterConfCtg {
+/* height: 450px; */
+display: flex;
+align-items: center;
+margin-left: auto;
+justify-content: flex-end;
+gap: 10px;
+}
+
+.pageContentDiv .rightContentSection .selectionConfCtg{
+        padding: 30px;
+    border-radius: 20px;
+backdrop-filter: blur(161.3px);
+background: rgba(255, 255, 255, 0.01);
+}
+
+.selectionMenu {
+    padding: 30px;
+    border-radius: 20px;
+backdrop-filter: blur(161.3px);
+background: rgba(255, 255, 255, 0.01);
+}
+
+.selectionMenu nav {
+    padding: 10px;
+    /* height: 450px; */
+    display: grid;
+    align-items: center;
+    justify-content: left;
+    gap: 20px;
+}
+
+.selectionMenu a {
+    accent-color: white;
+    font-size: large;
+    font-weight: bolder;
+    text-decoration: none;
+    text-decoration-color: white;
+    color: white;
+}
+
+.selectionMenu a:hover {
+    accent-color: white;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+.selectionConfCtg {
+    padding: 30px;
+}
+
+.ConfList {
+    display: grid;
+    align-items: flex-start;
+    width: auto;
+}
+
+.ConfReady {
+    background-color: white;
+    border-radius: 30px;
+}
+
+.pageContentDiv .leftContentSection .selectionMenu .picProfile img {
+    width: 100 px;
+    height: 100 px;
+}
+
+.profileContent {
+    display: inline-flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    padding: 10px;
+    color: white;
+}
+
+.pageContentDiv .leftContentSection .selectionMenu .emptySpace {
+    height: 12vh;
+}
+
+.pageContentDiv .leftContentSection .selectionMenu .settCab {
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    gap: 5px; 
+    font-size: medium;
+}
+
+.line {
+    background-color: white;
+    width: 14vw;
+    height: 1px;
+}
+
+.headerButtons img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.headerDiv {
+    backdrop-filter: blur(181.6px);
+    background: rgba(255, 255, 255, 0.01);
+}
+
+/* Навигация */
+.UpPanel nav {
+    display: flex;
+    justify-content: flex-end;  /* Выравнивание содержимого по правому краю */
+    gap: 20px;  /* расстояние между кнопками */
+    margin-left: auto; /* Это прижмет nav к правому краю */
+}
