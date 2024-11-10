@@ -77,15 +77,66 @@
             </header>
             
             <div class="selectionConfCtg">
-              <section class="ConfList">
-                <div class="ConfReady">
-                  <div class="ConfReadyArea">           
-                    <img src="pic/аватарка.svg">
-                    <p>Новая тема конференции <br> Эксперт: Даниил <br> 19:00 | Сегодня</p>
+              <div class="ConfList">
+                <div class="ConfReady"> 
+                  <img src="pic/аватарка.svg">
+                  <div class="info">
+                    <p><b>Новая тема конференции</b> <br> Эксперт: <b>Даниил </b> <br> 19:00 | Сегодня</p>
+                  </div>
+                  <div class="nextButtons"> <!-- Перенесено внутрь ConfReady -->
+                    <a href="#">
+                      <img src="pic/bi_three-dots.svg">
+                    </a>
+                    <button id="openModal">
+                      <img src="pic/Frame 41.svg">
+                    </button>
+                    
+                    <div id="modal" class="modal">
+                      <div class="modal-content">
+                        <button class="close">close</button>                   
+                        <button class="send">send</button>
+                        <input type="text" id="linkInput" placeholder="Вставьте ссылку сюда" />
+                      </div>
+                    </div>
+                    
+                    <script>
+                      const modal = document.querySelector('#modal');
+                      const btn = document.querySelector('#openModal');
+                      const close = document.querySelector('.close');
+                      const send = document.querySelector('.send'); // исправлено с #send на .send
+                      const linkInput = document.querySelector('#linkInput');
+                      
+                      // Открытие модального окна
+                      btn.onclick = function () {
+                        modal.style.display = 'block';
+                      };
+                      
+                      // Закрытие модального окна
+                      close.onclick = function () {
+                        modal.style.display = 'none';
+                      };
+                      
+                      // Закрытие модального окна при клике вне его
+                      window.onclick = function (event) {
+                        if (event.target === modal) {
+                          modal.style.display = 'none';
+                        }
+                      };
+                    
+                      // Переход по ссылке при нажатии на кнопку send
+                      send.onclick = function () {
+                        const url = linkInput.value;
+                        if (url) {
+                          window.open(url, '_blank'); // Открыть ссылку в новой вкладке
+                        } else {
+                          alert('Пожалуйста, введите ссылку.');
+                        }
+                      };
+                    </script>
+                    
                   </div>
                 </div>
-                <div class="ConfNotReady"></div>
-              </section>
+              </div>
             </div>
           </section>
         </div>

@@ -7,7 +7,8 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background: linear-gradient(301deg, #222222 0%, #2D2D2D 100%);
+    /* background: linear-gradient(301deg, #222222 0%, #2D2D2D 100%); */
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -99,11 +100,6 @@ justify-content: flex-end;
 gap: 10px;
 }
 
-.filterccc {
-    
-text-decoration: none;
-color: #31B0F4;
-}
 
 
 .filterccc:hover {
@@ -112,12 +108,20 @@ color: #31B0F4;
     color: #25abf3;
     }
 
+.filterccc {
+    
+text-decoration: none;
+color: #31B0F4;
+}
+
+
 .pageContentDiv .rightContentSection .selectionConfCtg{
         padding: 30px;
     border-radius: 20px;
 backdrop-filter: blur(161.3px);
 background: rgba(255, 255, 255, 0.01);
 }
+
 
 .selectionMenu {
     padding: 30px;
@@ -171,6 +175,11 @@ background: rgba(255, 255, 255, 0.01);
     width: auto;
     height: auto;
     margin: 10px 15px;
+}
+
+
+.confReadyArea h4 {
+    color: black;
 }
 
 .confReadyArea {
