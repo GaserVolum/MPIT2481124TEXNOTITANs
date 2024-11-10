@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: "Manrope";
-    src: url("../pages/fonts/Manrope.ttf");
+    src: url("fonts/Manrope.ttf");
 }
 
 :root {
@@ -32,11 +32,37 @@
 .logo {
   margin: 0 10px;
   display: flex;
-  gap: 5px;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo nav {
+	display: flex;
+	justify-content: flex-end;
+	margin-left: auto;
+	gap: 10px;
 }
 
 .logo > h3 {
   color: var(--main-light);
+}
+
+
+.logoutButton {
+	border-radius: 20px;
+	background-color: darkred;
+	padding: 10px 20px;
+}
+
+.logo a {
+	color: white;
+	text-decoration: none;
+}
+
+.logo .logoConfSt {
+	width: 50px;
+	height: 50px;
 }
 
 .main {
