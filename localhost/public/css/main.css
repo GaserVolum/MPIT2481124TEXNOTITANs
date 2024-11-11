@@ -12,6 +12,7 @@ body {
     flex-direction: column;
     align-items: stretch;
     position: relative;
+	font-family: Manrope;
 }
 
 
@@ -309,20 +310,128 @@ backdrop-filter: blur(161.3px);
 
 .inputRedFields input {
     border-radius: 50px;
-    color: #FFFFFF;
+    color: black;
     padding: 15px 20px;
 }
 
-.nextButReg > a {
-    text-decoration: none;
-    color: white;
-    accent-color: white;
+
+.nextButReg {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #4CAF50; /* Зеленый цвет */
+    color: white; /* Белый цвет текста */
+    font-size: 16px; /* Размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+    text-align: center; /* Центрируем текст */
+    border-radius: 8px; /* Скругленные углы, такие же как у полей ввода */
+    border: none; /* Без рамки */
+    cursor: pointer; /* Указатель при наведении */
+    transition: background-color 0.3s, transform 0.3s; /* Плавные эффекты */
+    
+    /* Расположение кнопки чуть ниже */
+    margin-top: 20px; /* Отступ сверху, чтобы кнопка была ниже */
 }
 
-.nextButReg > div {
-    border-radius: 50px;
-    margin-top: 20px;
-    width: fit-content;
-    background-color: #3E95EC;
-    padding: 10px 15px;
+/* Эффект при наведении */
+.nextButReg:hover {
+    background-color: #45a049; /* Темнее зеленый при наведении */
+    transform: scale(1.05); /* Немного увеличиваем кнопку при наведении */
 }
+
+/* Эффект при нажатии */
+.nextButReg:active {
+    background-color: #388e3c; /* Еще темнее при нажатии */
+    transform: scale(0.98); /* Слегка уменьшаем кнопку при нажатии */
+}
+
+/* Фокус на кнопке (например, при использовании клавиши Tab для навигации) */
+.nextButReg:focus {
+    outline: none; /* Убираем стандартное выделение */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Легкое подсвечивание */
+}
+
+
+
+/* Общие стили для модальных окон */
+.modal2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content2 {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+}
+
+.modal-content2 button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.close {
+    background-color: #f44336; /* Красная кнопка для закрытия */
+    color: white;
+}
+
+.send {
+    background-color: #4CAF50; /* Зеленая кнопка для отправки */
+    color: white;
+}
+
+.linkInput {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.linkInput:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Кнопка открытия модального окна */
+.openModalBtn {
+    padding: 10px 20px;
+    background-color: #007BFF; /* Синяя кнопка */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.openModalBtn:hover {
+    background-color: #0056b3; /* Цвет кнопки при наведении */
+}
+
+/* Стили для кнопки "Присоединиться" при наведении */
+.send:hover {
+    background-color: #45a049;
+}
+
+/* Стили для кнопки "Закрыть" при наведении */
+.close:hover {
+    background-color: #d32f2f;
+}
+

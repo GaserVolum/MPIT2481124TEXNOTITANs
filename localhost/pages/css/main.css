@@ -243,4 +243,6 @@ background: rgba(255, 255, 255, 0.01);
     justify-content: flex-end;  /* Выравнивание содержимого по правому краю */
     gap: 20px;  /* расстояние между кнопками */
     margin-left: auto; /* Это прижмет nav к правому краю */
+    color: white;
+	accent-color: white;
 }

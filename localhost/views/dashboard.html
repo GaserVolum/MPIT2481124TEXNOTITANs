@@ -78,10 +78,71 @@
             
             <div class="selectionConfCtg">
               <div class="ConfList">
+			    <!-- Кнопка для открытия модального окна -->
+<button id="openModal" class="openModalBtn">Создать или присоединиться</button>
+
+<div id="modal2" class="modal2">
+    <div class="modal-content2">
+        <button class="close">Закрыть</button>
+        <button class="send">Создать(присоединиться)</button>
+        <input type="text" id="linkInput" class="linkInput" placeholder="ссылка или название" name="2"/>
+    </div>
+</div>
+
+
+
+<script>
+    const modal2 = document.querySelector('#modal2'); // Модальное окно
+const btn = document.querySelector('#openModal'); // Кнопка для открытия модального окна
+const close = document.querySelector('.close'); // Кнопка для закрытия модального окна
+const send = document.querySelector('.send'); // Кнопка для действия "Присоединиться"
+const linkInput = document.querySelector('#linkInput'); // Поле для ввода ссылки или названия
+
+// Открытие модального окна при клике на кнопку
+btn.onclick = function () {
+    modal2.style.display = 'block'; // Показываем модальное окно
+};
+
+// Закрытие модального окна
+close.onclick = function () {
+    modal2.style.display = 'none'; // Скрываем модальное окно
+};
+
+// Закрытие модального окна при клике вне его
+window.onclick = function (event) {
+    if (event.target === modal2) {
+        modal2.style.display = 'none'; // Скрыть модальное окно, если кликнули вне его
+    }
+};
+
+// Переход по ссылке или выполнение действия при нажатии на кнопку "Присоединиться"
+send.onclick = function () {
+    const inputValue = linkInput.value.trim(); // Получаем введённое значение (название или ссылку)
+
+    if (inputValue) {
+        // Проверим, является ли введённое значение валидным URL
+        const urlPattern = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i; // Простой регекс для проверки URL
+        if (urlPattern.test(inputValue)) {
+            // Если это валидная ссылка, переходим по ней
+            window.location.href = inputValue; // Переход по ссылке
+        } else {
+            // Если введено название, просто выводим сообщение
+            alert('Вы присоединились к конференции: ' + inputValue);
+            modal2.style.display = 'none'; // Закрываем модальное окно
+        }
+    } else {
+        // Если поле пустое, показываем предупреждение
+        alert('Пожалуйста, введите ссылку или название конференции.');
+    }
+};
+
+</script>
+
+					
                 <div class="ConfReady"> 
                   <img src="../public/pic/аватарка.svg">
                   <div class="info">
-                    <p><b>Новая тема конференции</b> <br> Эксперт: <b>Даниил </b> <br> 19:00 | Сегодня</p>
+                    <p><b>Новая тема конференции</b> <br> Эксперт: <b>Иван Иванов </b> <br> 19:00 | Сегодня</p>
                   </div>
                   <div class="nextButtons"> <!-- Перенесено внутрь ConfReady -->
                     <a href="#">
@@ -90,49 +151,6 @@
                     <button id="openModal">
                       <img src="../public/pic/Frame 41.svg">
                     </button>
-                    
-                    <div id="modal" class="modal">
-                      <div class="modal-content">
-                        <button class="close">close</button>                   
-                        <button class="send">send</button>
-                        <input type="text" id="linkInput" placeholder="Вставьте ссылку сюда" />
-                      </div>
-                    </div>
-                    
-                    <script>
-                      const modal = document.querySelector('#modal');
-                      const btn = document.querySelector('#openModal');
-                      const close = document.querySelector('.close');
-                      const send = document.querySelector('.send'); // исправлено с #send на .send
-                      const linkInput = document.querySelector('#linkInput');
-                      
-                      // Открытие модального окна
-                      btn.onclick = function () {
-                        modal.style.display = 'block';
-                      };
-                      
-                      // Закрытие модального окна
-                      close.onclick = function () {
-                        modal.style.display = 'none';
-                      };
-                      
-                      // Закрытие модального окна при клике вне его
-                      window.onclick = function (event) {
-                        if (event.target === modal) {
-                          modal.style.display = 'none';
-                        }
-                      };
-                    
-                      // Переход по ссылке при нажатии на кнопку send
-                      send.onclick = function () {
-                        const url = linkInput.value;
-                        if (url) {
-                          window.open(url, '_blank'); // Открыть ссылку в новой вкладке
-                        } else {
-                          alert('Пожалуйста, введите ссылку.');
-                        }
-                      };
-                    </script>
                     
                   </div>
                 </div>
